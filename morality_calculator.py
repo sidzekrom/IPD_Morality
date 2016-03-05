@@ -192,7 +192,8 @@ class MoralityCalculator(object):
 
 
     ## TODO: design and implement more morality metrics
-
+    ## alternate morality metric: a weighted average of
+    # eigenjesus and eigenmoses
 
     #####
     # Getter methods
