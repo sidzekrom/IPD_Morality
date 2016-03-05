@@ -32,6 +32,7 @@ class MoralityCalculator(object):
 
         self.eigenjesus_scores = None
         self.eigenmoses_scores = None
+        self.eigenmesus_scores = None
         self.calculate_network_morality()
 
     def __str__(self):
@@ -189,11 +190,12 @@ class MoralityCalculator(object):
         coop_def_matrix = (self.cooperation_matrix-0.5)*2
         self.eigenmoses_scores =\
          self.principle_eigenvector(coop_def_matrix, 100)
-
+        self.eigenmesus_scores = (self.eigenjesus_scores +\
+            self.eigenmoses_scores) / 2
 
     ## TODO: design and implement more morality metrics
     ## alternate morality metric: a weighted average of
-    # eigenjesus and eigenmoses
+    # eigenjesus and eigenmoses implemented as eigenmesus
 
     #####
     # Getter methods
